@@ -1,0 +1,33 @@
+/*==================== MEDIA QUERIES ====================*/
+
+/* For small devices 0-300 px */
+
+@media screen and ( max-width: 300px ) {
+    
+}
+
+/* Mobile firest layout makes it up for 301-575px */
+
+/* For medium devices 576-767 px */
+
+@media screen and ( min-width: 576px ) {
+
+}
+
+/* For large devices 768-1149 px */
+
+@media screen and ( min-width: 768px ) {
+
+}
+
+/* For extra large devices greater than 1150px */
+
+@media screen and ( min-width: 1150px ) {
+
+}
+
+/* Font size for large devices */
+
+@media screen and ( min-width: ) {
+
+}
