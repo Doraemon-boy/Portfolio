@@ -16,3 +16,33 @@ if(crossIcon) {
     navElementsList.classList.remove('show-menu');
   });
 }
+
+/*==================== THEME TOGGLE ====================*/
+const root = document.documentElement,
+      themeToggle = document.querySelector('.js-theme-toggle'),
+      themeToggleIcon = document.querySelector('.js-theme-toggle-icon');
+
+themeToggle.addEventListener('click', () => {
+
+  let currentTheme = root.getAttribute('data-theme');
+
+  if (currentTheme === 'Dark') {
+
+    root.setAttribute('data-theme', 'Light');
+    themeToggleIcon.classList.add('animated');
+    themeToggleIcon.classList.remove('uil-moon');
+    themeToggleIcon.classList.add('uil-sun');
+
+  } else if (currentTheme === 'Light') {
+
+    root.setAttribute('data-theme', 'Dark');
+    themeToggleIcon.classList.add('animated');
+    themeToggleIcon.classList.remove('uil-sun');
+    themeToggleIcon.classList.add('uil-moon');
+    
+  }
+
+  setTimeout(()=> {
+    themeToggleIcon.classList.remove('animated');
+  }, 500)
+});

@@ -123,7 +123,7 @@ header{
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  top: 0;
+  top: 0; 
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
@@ -171,7 +171,7 @@ header{
   left: -100%;
   z-index: 110;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 4rem 2rem;
   background-color: var(--header-color);
   display: flex;
@@ -243,33 +243,82 @@ header{
 }
 
 /* theme toggle */
-.navbar-theme-toggle-container {
-  width:4rem;
-  height:2rem;
-  margin: 1rem;
+
+.theme-box{
+  height: var(--header-height);
+  width: calc(2* var(--header-height));
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
-.navbar-theme-toggle {
-  width: 4rem;
-  height: 2rem;
-  border-radius: 1rem;
+.theme-toggle {
   background-color: var(--accent-color);
-  font-size: 1.5rem;
+  width: 4rem;
+  height: 2.2rem;
+  border-radius: 2rem;
+  padding: 0 0.25rem;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  cursor: pointer;
+
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.3),
+              inset 2px 0 2px rgba(0,0,0,0.3),
+              inset 0 -1px 1px rgba(0,0,0,0.3);
 }
 
-.navbar-theme-ball {
-  height: 2.2rem;
-  width: 2.2rem;
-  border-radius: 50%;
-  background-color: white;
+.theme-toggle-indicator {
+  background-color: var(--accent-hover);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
   position: absolute;
+  transition: transform 0.3 ease;
+  background-color: var(--body-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.theme-toggle-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-toggle-icon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* theme toggle animation */
+.theme-toggle-icon .animated {
+  animation: spin 0.5s;
+}
+
+@keyframes spin {
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+/* light mode toggle design */
+
+html[data-theme="Light"] .theme-toggle {
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.1),
+              inset 0 2px 2px rgba(0,0,0,0.1),
+              inset 0 -1px 1px rgba(0,0,0,0.1);
+}
+
+html[data-theme="Light"] .theme-toggle-indicator {
+  transform: translateX(1.5rem);
+  background-color: var(--body-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+html[data-theme="Light"] .theme-toggle-icon{
+  color: black;
 }
 
 /* show navbar */
