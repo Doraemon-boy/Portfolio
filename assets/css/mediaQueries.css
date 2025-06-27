@@ -2,32 +2,70 @@
 
 /* For small devices 0-300 px */
 
-@media screen and ( max-width: 300px ) {
+/* @media screen and ( max-width: 300px ) {
     
-}
+} */
 
 /* Mobile firest layout makes it up for 301-575px */
 
 /* For medium devices 576-767 px */
 
-@media screen and ( min-width: 576px ) {
+/* @media screen and ( min-width: 576px ) {
 
-}
+} */
 
-/* For large devices 768-1149 px */
+/* For large devices 768-1024 px */
 
-@media screen and ( min-width: 768px ) {
+/* @media screen and ( min-width: 768px ) {
 
-}
+} */
 
-/* For extra large devices greater than 1150px */
+/* For extra large devices greater than 1024px */
 
-@media screen and ( min-width: 1150px ) {
+@media screen and ( min-width: 1024px ) {
+  :root{
+    --header-height:4rem;
+  } 
+  
+  .navbar-icon-container {
+    display: none;
+  }
 
+  .nav-elements-list {
+    position: static;
+    width: auto;
+    height: 100%;
+    padding: 0;
+    flex-direction: row;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    transform: none;
+    transition: none;
+    visibility: visible;
+    height: 100%;
+  }
 }
 
 /* Font size for large devices */
 
-@media screen and ( min-width: ) {
-
-}
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+} 

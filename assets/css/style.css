@@ -107,6 +107,12 @@ img {
   height: auto;
 }
 
+/*==================== REUSABLE CSS CLASSES ====================*/
+
+.section{
+  max-width: 1350px;
+}
+
 /*==================== HEADER ====================*/
 
 header{
@@ -125,15 +131,15 @@ header{
 /* logo */
 .header-logo{
   width:calc(2* var(--header-height));
-  height: var(--header-height);
   font-size: var(--big-font-size);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .header-logo a{
   color: var(--text-color);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* navbar */
