@@ -110,7 +110,7 @@ img {
 /*==================== REUSABLE CSS CLASSES ====================*/
 
 .section{
-  max-width: 1350px;
+  max-width: 1300px;
 }
 
 /*==================== HEADER ====================*/
@@ -124,7 +124,8 @@ header{
   justify-content: space-between;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 100;
 }
 
