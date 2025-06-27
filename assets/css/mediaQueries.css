@@ -63,7 +63,7 @@
 
 /* Font size for large devices */
 
-@media screen and (min-width: 968px) {
+@media screen and (min-width: 1024px) {
   :root {
     --header-height:4rem;
 
