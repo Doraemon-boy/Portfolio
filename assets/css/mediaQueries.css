@@ -2,33 +2,37 @@
 
 /* For small devices 0-300 px */
 
-/* @media screen and ( max-width: 300px ) {
+@media screen and ( max-width: 300px ) {
     
-} */
+}
 
 /* Mobile firest layout makes it up for 301-575px */
 
 /* For medium devices 576-767 px */
 
-/* @media screen and ( min-width: 576px ) {
+@media screen and ( min-width: 576px ) {
 
-} */
+  .nav-elements-list {
+    width: 60%;
+  }
+}
 
 /* For large devices 768-1024 px */
 
-/* @media screen and ( min-width: 768px ) {
+@media screen and ( min-width: 768px ) {
 
-} */
 
-/* For extra large devices greater than 1024px */
+}
 
-@media screen and ( min-width: 1024px ) {
+@media screen and ( min-width: 850px ) {
+
   .navbar-icon-container {
     display: none;
   }
 
   .nav-elements-list {
     position: static;
+    transform: none !important;
     width: auto;
     height: 100%;
     padding: 0;
@@ -50,12 +54,23 @@
     visibility: visible;
     height: 100%;
   }
+
+}
+
+/* For extra large devices greater than 1024px */
+
+@media screen and ( min-width: 1024px ) {
+
+
 }
 
 @media screen and (min-width: 1300px) {
+
   .section {
     border-radius: 1rem;
+    max-width: 1300px;
   }
+
   .nav-elements-list{
     border-radius: 1rem;
   }
@@ -64,6 +79,7 @@
 /* Font size for large devices */
 
 @media screen and (min-width: 1024px) {
+
   :root {
     --header-height:4rem;
 

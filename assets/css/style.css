@@ -87,6 +87,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+  transition: background-color 0.3s ease;
 }
 
 h1, h2, h3, h4 {
@@ -109,9 +110,6 @@ img {
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 
-.section{
-  max-width: 1300px;
-}
 
 /*==================== HEADER ====================*/
 
@@ -168,7 +166,8 @@ header{
 .nav-elements-list {
   position: fixed;
   top: 0;
-  left: -100%;
+  right: 0;
+  transform: translateX(100%);
   z-index: 110;
   width: 100%;
   height: 100vh;
@@ -179,9 +178,20 @@ header{
   align-items: flex-start;
   justify-content: space-between;
 
-  transition: left 0.4s ease;
+  transition: transform 0.4s ease-in-out;
 }
 
+/* show navbar */
+.show-menu {
+  transform: translateX(0);
+}
+
+.show-menu .nav-item {
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* nav looks */
 .nav-list {
   width: 100%;
   display: flex;
@@ -192,9 +202,9 @@ header{
 .nav-item {
   width: 100%;
   padding: 0.5rem 1rem;
-  transform: translateX(-150px);
+  transform: translateX(800px);
   visibility: hidden;
-  transition: transform 0.4s ease-out , visibility 0.4s;
+  transition: transform 0.4s ease , visibility 0.4s;
 }
 
 .nav-item:nth-child(1) {
@@ -321,15 +331,7 @@ html[data-theme="Light"] .theme-toggle-icon{
   color: black;
 }
 
-/* show navbar */
-.show-menu {
-  left: 0;
-}
 
-.show-menu .nav-item {
-  visibility: visible;
-  transform: translateX(0);
-}
 
 /*==================== MAIN ====================*/
 

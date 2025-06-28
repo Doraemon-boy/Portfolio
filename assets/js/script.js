@@ -1,5 +1,6 @@
 /*==================== MENU SHOW & HIDE ====================*/
 const navElementsList = document.querySelector('.js-nav-elements-list'),
+      navLinks = document.querySelectorAll('.js-nav-link'),
       menuIcon = document.querySelector('.js-menu-icon'),
       crossIcon = document.querySelector('.js-cross-icon');
 
@@ -10,12 +11,33 @@ if(menuIcon) {
   });
 }
 
-// menu hidden
+// menu hide
 if(crossIcon) {
   crossIcon.addEventListener('click' ,() => {
     navElementsList.classList.remove('show-menu');
   });
 }
+
+// menu hide on clicking the links in the sidebar 
+if(crossIcon) {
+  navLinks.forEach(link => {
+    link.addEventListener('click',() => {
+      navElementsList.classList.remove('show-menu');
+    });
+  });
+}
+
+// menu hide on clicking outside the sidebar
+document.addEventListener('pointerdown', (event) => {
+  const clickedInsideNavbar = navElementsList.contains(event.target);
+  const clickedMenuIcon = menuIcon.contains(event.target);
+  const menuOpen = navElementsList.classList.contains('show-menu');
+
+  if (!clickedInsideNavbar && !clickedMenuIcon && menuOpen ) {
+    navElementsList.classList.remove('show-menu');
+  }
+});
+
 
 /*==================== THEME TOGGLE ====================*/
 const root = document.documentElement,
