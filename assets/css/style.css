@@ -110,7 +110,6 @@ img {
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 
-
 /*==================== HEADER ====================*/
 
 header{
@@ -331,8 +330,40 @@ html[data-theme="Light"] .theme-toggle-icon{
   color: black;
 }
 
-
-
 /*==================== MAIN ====================*/
 
 /*==================== FOOTER ====================*/
+
+footer {
+  width: 100%;
+  height: calc(4 * var(--header-height));
+  background-color: var(--footer-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 300px;
+}
+
+.footer-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: auto;
+}
+
+.brand-logo {
+  font-size: calc(2.5 * var(--big-font-size));
+  font-weight: var(--font-semi-bold);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.credits {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
